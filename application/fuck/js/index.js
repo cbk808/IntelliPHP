@@ -4,3 +4,4 @@
 
 
 document.getElementById("biaoti").style.color="yellow";
+document.getElementById("biaoti").innerHTML="sdfwweffsffffwdf";
