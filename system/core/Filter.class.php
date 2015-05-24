@@ -11,7 +11,7 @@ class Filter
 	private $cur_item;//当前验证项
 	private $cur_item_name;//当前验证项的名称
 	private $cur_rule;//当前验证规则
-	public $cur_err=new array();//存放验证结果
+	public $cur_err= [];//存放验证结果
 	public $verify_result;//用来存放返回结果
 	//验证规则列表
 	private $basic_rules=[
@@ -21,13 +21,13 @@ class Filter
 		],
 	];
 	//构造函数
-	public __construct($conf,$input){
+	public function __construct($conf,$input){
 		$this->conf=$conf;
 		$this->input=$input;
 	}
 	//类型验证
 	private function verify_type(){
-		return $this->cur_rule['type']?typeof($this->cur_item)==$this->cur_rule['type']:true;
+		return $this->cur_rule['type']? gettype ($this->cur_item)==$this->cur_rule['type']:true;
 	}
 	//验证范式
 	private function verify_pattern(){
@@ -66,16 +66,14 @@ class Filter
 			$this->cur_rule['from']=$arr_range[0];
 			$this->cur_rule['to']=$arr_range[1];
 		}
-		$this->cur_err[$cur_item_name]=$this->verify_range() && $this->verify_type() && $this->verify_pattern();
+		$this->cur_err[$this->cur_item_name]=$this->verify_range() && $this->verify_type() && $this->verify_pattern();
 	}
 	//验证数组
 	public function exec_verification_r(){
 		if(is_array($this->input)){
 			foreach($this->conf as $key=>$value){
-				$arr_conf=explode('.',$key);
-				for($i=0,$l=count($arr_conf);$i<l;$i++){
-					$temp_item=$temp_item[$arr_conf[$i]];					
-				}
+				$temp_item=preg_replace("/\./","][",$key);
+                $temp_item=eval("\$input[".$temp_item."]");
 				$this->cur_item=$temp_item;
 				$this->exec_verification($value[0]);
 			}
@@ -84,6 +82,7 @@ class Filter
 			$this->exec_verification($this->conf[0]);
 		}
 	}
+
+
 }
 
- ?>
