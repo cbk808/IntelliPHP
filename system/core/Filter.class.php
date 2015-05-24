@@ -60,7 +60,7 @@ class Filter
 	//主验证函数
 	private function exec_verification($str_rule){
 		$arr_rule=explode(' ', $str_rule);
-		$this->cur_rule=$arr_rule[1];
+		$this->cur_rule=$this->basic_rules[$arr_rule[1]];
 		if(!empty($arr_rule[2])){
 			$arr_range=explode(',',trim($arr_rule[2],"[]"));
 			$this->cur_rule['from']=$arr_range[0];
@@ -69,7 +69,7 @@ class Filter
 		$this->cur_err[$this->cur_item_name]=$this->verify_range() && $this->verify_type() && $this->verify_pattern();
 	}
 	//验证数组
-	public function exec_verification_r(){
+	private function exec_verification_r(){
 		if(is_array($this->input)){
 			foreach($this->conf as $key=>$value){
 				$temp_item=preg_replace("/\./","][",$key);
