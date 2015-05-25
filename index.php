@@ -7,3 +7,6 @@
  */
 
 phpinfo();
+
+var_dump($_GET);
+echo "mark";
