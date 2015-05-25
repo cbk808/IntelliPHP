@@ -67,15 +67,41 @@ class Filter
 		}
 		$this->cur_err[$this->cur_item_name]=$this->verify_range() && $this->verify_type() && $this->verify_pattern();
 	}
-	//递归验证数组
+
+    //递归函数
+    private function verify_item_r($cur_index,$arr,$index,$rule){
+        if($index<count($arr)-1){
+            //如果是数字下标则执行递归
+            if($arr[$index]=='~'){
+                    $cur_input=eval("\$this->input".$cur_index);
+                    for($i=0,$l=count($cur_input);$i<$l;$i++) {
+                        $this->verify_item_r($cur_index."[".$i."]",$arr,$index+1,$rule);
+                    }
+            }else{
+                $this->verify_item_r($cur_index."[".$arr[$index]."]",$arr,$index+1,$rule);
+            }
+        }else{
+            //执行验证
+            if($arr[$index]=='~'){
+                $cur_input=eval("\$this->input".$cur_index);
+                foreach($cur_input as $val){
+                    $this->cur_item=$val;
+                    $this->exec_verification($rule[0]);
+                }
+            }else{
+                $cur_input=eval("\$this->input".$cur_index."[".$arr[$index]."]");
+                $this->cur_item=$cur_input;
+                $this->exec_verification($rule[0]);
+            }
+        }
+    }
+
+	//验证数组
 	private function exec_verification_r(){
+            //采用逐条的方式进行验证
 			foreach($this->conf as $key=>$value){
-				$temp_item=preg_replace("/\./","][",$key);
-                $temp_item=eval("\$input[".$temp_item."]");
-
-
-				$this->cur_item=$temp_item;
-				$this->exec_verification($value[0]);
+                $key_arr=explode(".",$key);
+                $this->verify_item_r("",$key_arr,0,$value);
 			}
 	}
 
@@ -90,6 +116,4 @@ class Filter
             $this->exec_verification($this->conf[0]);
         }
     }
-
-
 }
