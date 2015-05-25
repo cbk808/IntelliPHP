@@ -21,9 +21,8 @@ class Filter
 		],
 	];
 	//构造函数
-	public function __construct($conf,$input){
-		$this->conf=$conf;
-		$this->input=$input;
+	public function __construct(){
+
 	}
 	//类型验证
 	private function verify_type(){
@@ -68,20 +67,29 @@ class Filter
 		}
 		$this->cur_err[$this->cur_item_name]=$this->verify_range() && $this->verify_type() && $this->verify_pattern();
 	}
-	//验证数组
+	//递归验证数组
 	private function exec_verification_r(){
-		if(is_array($this->input)){
 			foreach($this->conf as $key=>$value){
 				$temp_item=preg_replace("/\./","][",$key);
                 $temp_item=eval("\$input[".$temp_item."]");
+
+
 				$this->cur_item=$temp_item;
 				$this->exec_verification($value[0]);
 			}
-		}else{
-			$this->cur_item=$this->input;
-			$this->exec_verification($this->conf[0]);
-		}
 	}
+
+    //验证入口
+    public function verify($conf,$input){
+        $this->conf=$conf;
+        $this->input=$input;
+        if(is_array($this->input)){
+            $this->exec_verification_r();
+        }else{
+            $this->cur_item=$this->input;
+            $this->exec_verification($this->conf[0]);
+        }
+    }
 
 
 }
