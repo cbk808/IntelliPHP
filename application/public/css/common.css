@@ -1,0 +1,11 @@
+body
+{
+    margin:0px;
+    padding:0px;
+}
+.nav
+{
+    height:40px;
+    width:100%;
+    background:black;
+}
