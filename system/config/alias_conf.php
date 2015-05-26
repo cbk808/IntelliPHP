@@ -13,4 +13,5 @@ return array (
     'Captcha' => 'Captcha',
     //app类库
     'Portal' => "Portal",
+    'PortalIndex'=>"PortalIndex",
 );

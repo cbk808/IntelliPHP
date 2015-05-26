@@ -8,6 +8,9 @@
 
 class PortalIndex {
     public function __construct(){
-                
+
+    }
+    public function index(){
+        $_GET['cur_app']->test();
     }
 }

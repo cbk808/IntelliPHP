@@ -28,4 +28,7 @@ class Portal extends AppBase{
         $fn_name=$this->entry;
         $this->module->$fn_name();//执行入口函数
     }
+    public function test(){
+        echo "sadjflasjdfjalsd";
+    }
 }
