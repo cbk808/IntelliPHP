@@ -1,4 +1,6 @@
 <?php
+
+include BASE_DIR."/system/config/constants.php";
 //注册自动装载函数
 function autoLoader($class)
 {
@@ -8,9 +10,15 @@ function autoLoader($class)
         include_once LIB_DIR."/".$class;
     }
 }
-
+//启用自动装载
 spl_autoload_register(autoLoader);
-include BASE_DIR."/system/config/constants.php";
 Configure::$conf_files=include_once(CONF_DIR."/conf_files.php");
+
+//初始化输入
+
+//启动路由功能
+Router::start();
+
+
 
 
