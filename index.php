@@ -9,3 +9,4 @@
 date_default_timezone_set("UTC");
 define(BASE_DIR,dirname(__FILE__));
 include BASE_DIR. "/system/shell.php";
+var_dump($_SERVER);

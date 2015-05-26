@@ -1,12 +1,13 @@
-<?php 
- return array (
-  'IntelliPHP' => 'IntelliPHP.php',
-  'Filter' => 'Filter.php',
-  'DB' => 'DB.php',
-  'Render' => 'Render.php',
-  'Router' => 'Router.php',
-  'Register' => 'Register.php',
-  'Configure' => 'Configure.php',
-  'Algorithm' => 'Algorithm.php',
-  'Captcha' => 'Captcha.php',
+<?php
+//这里添加别名到实际类名的映射, 供注册器使用
+return array (
+    'IntelliPHP' => 'IntelliPHP',
+    'Filter' => 'Filter',
+    'DB' => 'DB',
+    'Render' => 'Render',
+    'Router' => 'Router',
+    'Register' => 'Register',
+    'Configure' => 'Configure',
+    'Algorithm' => 'Algorithm',
+    'Captcha' => 'Captcha',
 );
