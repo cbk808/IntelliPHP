@@ -1,4 +1,5 @@
 <?php
+//注册自动装载函数
 function autoLoader($class)
 {
     if(file_exists(CORE_DIR."/".$class)){
@@ -8,5 +9,4 @@ function autoLoader($class)
     }
 }
 spl_autoload_register(autoLoader);
-
-
+include BASE_DIR."/system/config/constants.php";

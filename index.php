@@ -6,5 +6,4 @@
  * Time: 19:57
  */
 define(BASE_DIR,dirname(__FILE__));
-include BASE_DIR."/system/config/constants.php";
 include BASE_DIR. "/system/shell.php";
