@@ -10,7 +10,7 @@ class Router
         return $arr;
     }
     static function start(){
-        global $cur_app,$url_snippet;
+        global $cur_app,$url_snippet,$count_url_snippet;
         $app_alias=Configure::get("app_alias");
         $url_snippet=self::get_url_snippet();
         if($app_alias[$url_snippet[0]]){

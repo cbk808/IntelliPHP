@@ -5,12 +5,15 @@ include BASE_DIR."/system/config/constants.php";
 
 function autoLoader($class)
 {
-    if(file_exists(CORE_DIR."/".$class.".php")){
-        include_once CORE_DIR."/".$class.".php";
-    }elseif(file_exists(LIB_DIR."/".$class.".php")){
-        include_once LIB_DIR."/".$class.".php";
-    }elseif(file_exists(APP_DIR."/".$class.".php")){
-        include_once APP_DIR."/".strtolower($class)."/php/".$class.".php";
+    $file_1=CORE_DIR."/".$class.".php";
+    $file_2=LIB_DIR."/".$class.".php";
+    $file_3=APP_DIR."/".strtolower($class)."/php/".$class.".php";
+    if(file_exists($file_1)){
+        include_once $file_1;
+    }elseif(file_exists($file_2)){
+        include_once $file_2;
+    }elseif(file_exists($file_3)){
+        include_once $file_3;
     }
 }
 
