@@ -7,7 +7,7 @@
  */
 
 class Configure {
-    protected static $conf_files;
+    public static $conf_files;
     protected static $conf_array;
     static function get($file){
         if(!self::$conf_array[$file]){

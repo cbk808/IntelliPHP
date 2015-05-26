@@ -8,5 +8,9 @@ function autoLoader($class)
         include_once LIB_DIR."/".$class;
     }
 }
+
 spl_autoload_register(autoLoader);
 include BASE_DIR."/system/config/constants.php";
+Configure::$conf_files=include_once(CONF_DIR."/conf_files.php");
+
+

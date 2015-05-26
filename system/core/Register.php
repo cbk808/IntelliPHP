@@ -23,7 +23,9 @@ class Register {
     //获取对象
     static function get($alias){
         if(!self::$objects[$alias]){
-
+            $all_alias=Configure::get("alias_conf");
+            $object=new $all_alias[$alias];
+            self::set($alias,$object);
         }
         return self::$objects[$alias];
     }

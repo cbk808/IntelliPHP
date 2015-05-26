@@ -1,8 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: midix
- * Date: 2015/5/26
- * Time: 14:27
- */
-
+return array (
+    'IntelliPHP' => 'IntelliPHP.php',
+    'Filter' => 'Filter.php',
+    'DB' => 'DB.php',
+    'Render' => 'Render.php',
+    'Router' => 'Router.php',
+    'Register' => 'Register.php',
+    'Configure' => 'Configure.php',
+    'Algorithm' => 'Algorithm.php',
+    'Captcha' => 'Captcha.php',
+);
