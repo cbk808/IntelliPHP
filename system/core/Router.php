@@ -17,7 +17,7 @@ class Router
             $cur_app=Register::get($app_alias[$url_snippet[0]]);
         }else{
             $cur_app=Register::get("Portal");
-            $_GET['cur_app']=$cur_app;
+            $_GET['g_cur_app']=$cur_app;
         }
         $cur_app->run();
     }

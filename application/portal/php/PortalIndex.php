@@ -11,6 +11,6 @@ class PortalIndex {
 
     }
     public function index(){
-        $_GET['cur_app']->test();
+        Render::load();
     }
 }
