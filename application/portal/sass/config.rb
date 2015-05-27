@@ -4,7 +4,7 @@ require 'compass-normalize'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_path="../css"
+css_path="D:/workspace/web-development/intelliPHP-v1/application/portal/css"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
