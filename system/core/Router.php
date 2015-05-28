@@ -13,8 +13,8 @@ class Router
         global $cur_app,$url_snippet,$count_url_snippet;
         $app_alias=Configure::get("app_alias");
         $url_snippet=self::get_url_snippet();
-        if($app_alias[$url_snippet[0]]){
-            $cur_app=Register::get($app_alias[$url_snippet[0]]);
+        if($app_alias[$url_snippet[1]]){
+            $cur_app=Register::get($app_alias[$url_snippet[1]]);
         }else{
             $cur_app=Register::get("Portal");
             $_GET['g_cur_app']=$cur_app;
