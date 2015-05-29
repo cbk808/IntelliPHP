@@ -4,6 +4,11 @@
 .center{
   margin:0 auto;
 }
+ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
 
 .top-bar{
   width:$P100;
@@ -15,13 +20,23 @@
       @include box-sizing;
       width:960px;
       height:$P100;
-      .main-logo{
-        float:left;
-        height:$P100;
-        background:url("../image/logo-3.png");
-    }
-      .top-bar-item{
-        float:right;
+      @at-root {
+        .main-logo {
+          float: left;
+          height: $P100;
+          width:60px;
+          cursor:pointer;
+          @include bkg-center;
+          @include box-sizing;
+          padding: 2px 0px;
+          background-image: url("../image/logo-8.png");
+          &:hover{
+            background-image:url("../image/logo-6.png");
+          }
+        }
+        .top-bar-item {
+          float: right;
+        }
       }
     }
     }

@@ -266,6 +266,49 @@ th {
   padding: 0;
 }
 
-/* line 2, ../sass/sass/index.scss */
-.test {
+/* line 4, ../sass/sass/index.scss */
+.center, .top-bar-box {
+  margin: 0 auto;
+}
+
+/* line 7, ../sass/sass/index.scss */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, ../sass/sass/index.scss */
+.top-bar {
+  width: 100%;
+  background: #3c3d3d;
+  height: 55px;
+}
+/* line 18, ../sass/sass/index.scss */
+.top-bar-box {
+  box-sizing: border-box;
+  width: 960px;
+  height: 100%;
+}
+/* line 24, ../sass/sass/index.scss */
+.main-logo {
+  float: left;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  padding: 2px 0px;
+  background-image: url("../image/logo-8.png");
+}
+/* line 33, ../sass/sass/index.scss */
+.main-logo:hover {
+  background-image: url("../image/logo-6.png");
+}
+
+/* line 37, ../sass/sass/index.scss */
+.top-bar-item {
+  float: right;
 }
