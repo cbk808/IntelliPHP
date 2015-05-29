@@ -311,4 +311,22 @@ ul {
 /* line 37, ../sass/sass/index.scss */
 .top-bar-item {
   float: right;
+    box-sizing:border-box;
+    height:100%;
+    padding:10px 0px;
+    line-height:100%;
+}
+.top-bar-item li{
+    display:inline-block;
+    line-height:35px;
+    font-size:20px;
+    font-family:"Microsoft Yahei";
+    padding:0px 5px;
+    height:100%;
+    color:#fff;
+    opacity:0.7;
+    cursor:pointer;
+}
+.top-bar-item li:hover{
+    opacity:1.0;
 }

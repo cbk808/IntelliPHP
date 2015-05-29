@@ -1,6 +1,16 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
+@font-face {
+  font-family: 'icomoon';
+  src:url('../../../public/font/icomoon.eot');
+  src:url('../../../public/font/icomoon.eot') format('embedded-opentype'),
+  url('../../../public/font/icomoon.ttf') format('truetype'),
+  url('../../../public/font/icomoon.woff') format('woff'),
+  url('../../../public/font/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .center{
   margin:0 auto;
 }
