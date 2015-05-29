@@ -1,8 +1,28 @@
 @import "normalize";
-.test{
-  background:red;
-  font-size:18px;
-  padding:0;
-  display:block;
-  padding:5px;
+@import "variables";
+@import "mixins";
+.center{
+  margin:0 auto;
 }
+
+.top-bar{
+  width:$P100;
+  background:$eblack;
+  height:55px;
+  @at-root{
+    .top-bar-box{
+      @extend .center;
+      @include box-sizing;
+      width:960px;
+      height:$P100;
+      .main-logo{
+        float:left;
+        height:$P100;
+        background:url("../image/logo-3.png");
+    }
+      .top-bar-item{
+        float:right;
+      }
+    }
+    }
+  }
