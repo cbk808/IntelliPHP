@@ -354,24 +354,13 @@ ul li {
   opacity: 1.0;
 }
 
-/* line 70, ../sass/sass/index.scss */
-.search-box-icon {
-  font-family: 'icomoon';
-  position: absolute;
+/* line 76, ../sass/sass/index.scss */
+.search-box{
+    width:25px;
+    opacity: 0;
+    transition:0.2s;
 }
-/* line 74, ../sass/sass/index.scss */
-.search-box-icon:before {
-  content: "\e986";
-}
-
-/* line 78, ../sass/sass/index.scss */
-#global-search-input {
-  display: none;
-  width: 0px;
-  transition: 0.2s;
-}
-/* line 82, ../sass/sass/index.scss */
-#global-search-input:focus {
-  width: 150px;
-  display: inline-block;
+.search-box:focus{
+    width:150px;
+    opacity: 1;
 }

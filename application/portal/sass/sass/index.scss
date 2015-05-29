@@ -67,15 +67,22 @@ ul li{
     }
     }
   }
+.search-box-icon{
+
+}
 .search-box{
-  
   @at-root {
     .search-box-icon{
-      font-family: 'icomoon';
-      &:before{
+      &:after{
+        position: absolute;
+        left:0px;
+        top:7px;
+
+        font-family: 'icomoon';
         content: "\e986";
       }
     }
   }
+
 }
 
