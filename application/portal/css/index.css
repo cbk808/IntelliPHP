@@ -355,21 +355,22 @@ ul li {
 }
 
 /* line 70, ../sass/sass/index.scss */
-.search-box {
+.search-box-icon {
   font-family: 'icomoon';
+  position: absolute;
 }
-/* line 72, ../sass/sass/index.scss */
-.search-box:before {
+/* line 74, ../sass/sass/index.scss */
+.search-box-icon:before {
   content: "\e986";
 }
 
-/* line 76, ../sass/sass/index.scss */
+/* line 78, ../sass/sass/index.scss */
 #global-search-input {
   display: none;
   width: 0px;
   transition: 0.2s;
 }
-/* line 80, ../sass/sass/index.scss */
+/* line 82, ../sass/sass/index.scss */
 #global-search-input:focus {
   width: 150px;
   display: inline-block;
