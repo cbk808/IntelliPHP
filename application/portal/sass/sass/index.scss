@@ -36,7 +36,10 @@ ul li{
           float:left;
           height:100%;
           width:68px;
-          @include bkg-center("../image/logo-8.png");
+          @include spirit-img("../image/logo-9.png",51px);
+          &:hover{
+            @include spirit-img("../image/logo-9.png",2px);
+          }
         }
         .top-bar-items{
           float:right;
@@ -61,10 +64,28 @@ ul li{
             .search-box-icon{
               @include v-center;
               position:absolute;
+              left:3px;
               font-family: 'icomoon';
               height:100%;
               span{
-                color:$eblack;
+                color:lightgray;
+              }
+            }
+            .search-box-input{
+              border-radius: 4px;
+              border:none;
+              outline:none;
+              text-indent:23px;
+              width:20px;
+              color:black;
+              opacity:0;
+              transition:0.2s;
+              padding:2px;
+              cursor:pointer;
+              &:focus{
+                width:200px;
+                cursor:initial;
+                opacity:1;
               }
             }
           }

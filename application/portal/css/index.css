@@ -222,12 +222,18 @@ ul li {
   float: left;
   height: 100%;
   width: 68px;
-  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../image/logo-8.png"); }
+  background-position: 0% 51px;
+  background-size: 100% auto;
+  background-image: url("../image/logo-9.png"); }
+/* line 40, ../sass/sass/index.scss */
+.main-logo:hover {
+  background-repeat: no-repeat;
+  background-position: 0% 2px;
+  background-size: 100% auto;
+  background-image: url("../image/logo-9.png"); }
 
-/* line 41, ../sass/sass/index.scss */
+/* line 44, ../sass/sass/index.scss */
 .top-bar-items {
   float: right;
   height: 100%;
@@ -236,43 +242,66 @@ ul li {
   color: #fff;
   position: relative;
   line-height: 100%; }
-/* line 13, ../sass/sass/_mixins.scss */
+/* line 20, ../sass/sass/_mixins.scss */
 .top-bar-items > * {
   display: inline-block;
   vertical-align: middle;
   line-height: 100%; }
-/* line 18, ../sass/sass/_mixins.scss */
+/* line 25, ../sass/sass/_mixins.scss */
 .top-bar-items:after {
   display: inline-block;
   vertical-align: middle;
   content: '';
   height: 100%; }
-/* line 49, ../sass/sass/index.scss */
+/* line 52, ../sass/sass/index.scss */
 .top-bar-items li {
   cursor: pointer;
   margin: 0 10px;
   opacity: 0.7; }
-/* line 53, ../sass/sass/index.scss */
+/* line 56, ../sass/sass/index.scss */
 .top-bar-items li:hover {
   opacity: 1; }
-/* line 58, ../sass/sass/index.scss */
+/* line 61, ../sass/sass/index.scss */
+.search-box {
+  position: relative; }
+
+/* line 64, ../sass/sass/index.scss */
 .search-box-icon {
   position: relative;
   line-height: 100%;
-  font-family: 'icomoon';
   position: absolute;
+  left: 3px;
+  font-family: 'icomoon';
   height: 100%; }
-/* line 13, ../sass/sass/_mixins.scss */
+/* line 20, ../sass/sass/_mixins.scss */
 .search-box-icon > * {
   display: inline-block;
   vertical-align: middle;
   line-height: 100%; }
-/* line 18, ../sass/sass/_mixins.scss */
+/* line 25, ../sass/sass/_mixins.scss */
 .search-box-icon:after {
   display: inline-block;
   vertical-align: middle;
   content: '';
   height: 100%; }
-/* line 63, ../sass/sass/index.scss */
+/* line 70, ../sass/sass/index.scss */
 .search-box-icon span {
-  color: #3c3d3d; }
+  color: lightgray; }
+
+/* line 74, ../sass/sass/index.scss */
+.search-box-input {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  text-indent: 23px;
+  width: 20px;
+  color: black;
+  opacity: 0;
+  transition: 0.2s;
+  padding: 2px;
+  cursor: pointer; }
+/* line 85, ../sass/sass/index.scss */
+.search-box-input:focus {
+  width: 200px;
+  cursor: initial;
+  opacity: 1; }

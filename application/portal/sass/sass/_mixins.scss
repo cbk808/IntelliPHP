@@ -7,6 +7,13 @@
   background-position: center;
   background-image:url($url);
 }
+
+@mixin spirit-img($url:none, $pos1:"0%"){
+  background-repeat: no-repeat;
+  background-position:0% $pos1;
+  background-size:100% auto;
+  background-image:url($url);
+}
 @mixin v-center{
   position:relative;
   line-height:100%;
