@@ -224,7 +224,7 @@ ul li {
   width: 68px;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-position: 0% -52px;
+  background-position: 0% -51px;
   background-size: 100% auto;
   background-image: url("../image/logo-9.png"); }
 /* line 41, ../sass/sass/index.scss */
@@ -242,13 +242,14 @@ ul li {
   font-family: "Microsoft Yahei";
   color: #fff;
   position: relative;
-  line-height: 100%; }
-/* line 20, ../sass/sass/_mixins.scss */
+  line-height: 100%;
+  white-space: nowrap; }
+/* line 21, ../sass/sass/_mixins.scss */
 .top-bar-items > * {
   display: inline-block;
   vertical-align: middle;
   line-height: 100%; }
-/* line 25, ../sass/sass/_mixins.scss */
+/* line 26, ../sass/sass/_mixins.scss */
 .top-bar-items:after {
   display: inline-block;
   vertical-align: middle;
@@ -263,47 +264,53 @@ ul li {
 .top-bar-items li:hover {
   opacity: 1; }
 
-/* line 64, ../sass/sass/index.scss */
+/* line 63, ../sass/sass/index.scss */
 .search-box {
-  position: relative;
-  opacity: 1 !important; }
+  opacity: 1 !important;
+  position: relative; }
 
-/* line 68, ../sass/sass/index.scss */
+/* line 67, ../sass/sass/index.scss */
 .search-box-icon {
   position: relative;
   line-height: 100%;
+  white-space: nowrap;
   position: absolute;
   left: 3px;
   font-family: 'icomoon';
   height: 100%; }
-/* line 20, ../sass/sass/_mixins.scss */
+/* line 21, ../sass/sass/_mixins.scss */
 .search-box-icon > * {
   display: inline-block;
   vertical-align: middle;
   line-height: 100%; }
-/* line 25, ../sass/sass/_mixins.scss */
+/* line 26, ../sass/sass/_mixins.scss */
 .search-box-icon:after {
   display: inline-block;
   vertical-align: middle;
   content: '';
   height: 100%; }
-/* line 74, ../sass/sass/index.scss */
+/* line 73, ../sass/sass/index.scss */
 .search-box-icon span {
   color: lightgray; }
+/* line 75, ../sass/sass/index.scss */
+.search-box-icon span:hover {
+  opacity: 1; }
 
-/* line 78, ../sass/sass/index.scss */
+/* line 80, ../sass/sass/index.scss */
 .search-box-input {
   border-radius: 4px;
+  box-sizing: border-box;
   border: none;
   outline: none;
   text-indent: 23px;
-  width: 20px;
+  width: 27px;
   color: black;
   opacity: 0;
   transition: 0.4s;
   padding: 2px;
+  height: 30px;
   cursor: pointer; }
-/* line 89, ../sass/sass/index.scss */
+/* line 93, ../sass/sass/index.scss */
 .search-box-input:focus {
   width: 200px;
   cursor: initial;

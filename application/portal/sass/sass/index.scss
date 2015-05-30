@@ -37,7 +37,7 @@ ul li{
           height:100%;
           width:68px;
           cursor:pointer;
-          @include spirit-img("../image/logo-9.png",-52px);
+          @include spirit-img("../image/logo-9.png",-51px);
           &:hover{
             @include spirit-img("../image/logo-9.png",2px);
           }
@@ -58,12 +58,11 @@ ul li{
             opacity:1;
           }
           }
-
           }
           @at-root {
             .search-box{
-              position:relative;
               opacity: 1!important;
+              position:relative;
             }
             .search-box-icon{
               @include v-center;
@@ -75,20 +74,21 @@ ul li{
                 color:lightgray;
                 &:hover{
                   opacity:1;
-                  color:#fff;
                 }
               }
             }
             .search-box-input{
               border-radius: 4px;
+              box-sizing:border-box;
               border:none;
               outline:none;
               text-indent:23px;
-              width:20px;
+              width:27px;
               color:black;
               opacity:0;
               transition:0.4s;
               padding:2px;
+              height:30px;
               cursor:pointer;
               &:focus{
                 width:200px;
@@ -101,4 +101,10 @@ ul li{
       }
     }
   }
+#account-operation{
+  &:before{
+    font-family: "icomoon";
+    content:"";
+  }
+}
 

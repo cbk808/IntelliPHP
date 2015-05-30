@@ -17,6 +17,7 @@
 @mixin v-center{
   position:relative;
   line-height:100%;
+  white-space: nowrap;
   >*{
     display:inline-block;
     vertical-align: middle;
