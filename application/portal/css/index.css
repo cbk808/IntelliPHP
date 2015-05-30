@@ -259,12 +259,14 @@ ul li {
   cursor: pointer;
   margin: 0 10px;
   opacity: 0.7; }
-/* line 60, ../sass/sass/index.scss */
+/* line 57, ../sass/sass/index.scss */
 .top-bar-items li:hover {
   opacity: 1; }
-/* line 65, ../sass/sass/index.scss */
+
+/* line 64, ../sass/sass/index.scss */
 .search-box {
-  position: relative; }
+  position: relative;
+  opacity: 1 !important; }
 
 /* line 68, ../sass/sass/index.scss */
 .search-box-icon {
