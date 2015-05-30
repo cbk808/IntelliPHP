@@ -222,18 +222,19 @@ ul li {
   float: left;
   height: 100%;
   width: 68px;
+  cursor: pointer;
   background-repeat: no-repeat;
-  background-position: 0% 51px;
+  background-position: 0% -52px;
   background-size: 100% auto;
   background-image: url("../image/logo-9.png"); }
-/* line 40, ../sass/sass/index.scss */
+/* line 41, ../sass/sass/index.scss */
 .main-logo:hover {
   background-repeat: no-repeat;
   background-position: 0% 2px;
   background-size: 100% auto;
   background-image: url("../image/logo-9.png"); }
 
-/* line 44, ../sass/sass/index.scss */
+/* line 45, ../sass/sass/index.scss */
 .top-bar-items {
   float: right;
   height: 100%;
@@ -253,19 +254,19 @@ ul li {
   vertical-align: middle;
   content: '';
   height: 100%; }
-/* line 52, ../sass/sass/index.scss */
+/* line 53, ../sass/sass/index.scss */
 .top-bar-items li {
   cursor: pointer;
   margin: 0 10px;
   opacity: 0.7; }
-/* line 56, ../sass/sass/index.scss */
+/* line 60, ../sass/sass/index.scss */
 .top-bar-items li:hover {
   opacity: 1; }
-/* line 61, ../sass/sass/index.scss */
+/* line 65, ../sass/sass/index.scss */
 .search-box {
   position: relative; }
 
-/* line 64, ../sass/sass/index.scss */
+/* line 68, ../sass/sass/index.scss */
 .search-box-icon {
   position: relative;
   line-height: 100%;
@@ -284,11 +285,11 @@ ul li {
   vertical-align: middle;
   content: '';
   height: 100%; }
-/* line 70, ../sass/sass/index.scss */
+/* line 74, ../sass/sass/index.scss */
 .search-box-icon span {
   color: lightgray; }
 
-/* line 74, ../sass/sass/index.scss */
+/* line 78, ../sass/sass/index.scss */
 .search-box-input {
   border-radius: 4px;
   border: none;
@@ -297,10 +298,10 @@ ul li {
   width: 20px;
   color: black;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.4s;
   padding: 2px;
   cursor: pointer; }
-/* line 85, ../sass/sass/index.scss */
+/* line 89, ../sass/sass/index.scss */
 .search-box-input:focus {
   width: 200px;
   cursor: initial;

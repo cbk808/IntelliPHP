@@ -36,7 +36,8 @@ ul li{
           float:left;
           height:100%;
           width:68px;
-          @include spirit-img("../image/logo-9.png",51px);
+          cursor:pointer;
+          @include spirit-img("../image/logo-9.png",-52px);
           &:hover{
             @include spirit-img("../image/logo-9.png",2px);
           }
@@ -49,10 +50,11 @@ ul li{
           color:#fff;
 
           @include v-center;
-          li{
+          li:not(.search-box){
             cursor:pointer;
             margin:0 10px;
             opacity:0.7;
+          }
             &:hover{
               opacity:1;
             }
@@ -79,7 +81,7 @@ ul li{
               width:20px;
               color:black;
               opacity:0;
-              transition:0.2s;
+              transition:0.4s;
               padding:2px;
               cursor:pointer;
               &:focus{
