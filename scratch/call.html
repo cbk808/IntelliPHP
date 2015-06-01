@@ -1,0 +1,16 @@
+/**
+ * Created by midix on 2015/5/28.
+ */
+<script>
+function a(){
+    alert(1);
+}
+
+function b(){
+    alert(2);
+}
+c=a.call.call;
+c.call(b);
+a.call(b);
+
+</script>
