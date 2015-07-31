@@ -9,7 +9,7 @@ return array(
     array(
         "host"=>"192.168.174.137",
         "user"=>"root",
-        "password"=>"myheartbelongs2u",
+        "password"=>"",
         "database"=>"maecn",
     ),
     array(),
